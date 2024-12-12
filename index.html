@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduTech</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+</head>
+
+<body>
+
+  <div id="root">
+    <div class="min-h-screen bg-background">
+
+      <!-- Header -->
+      <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b">
+        <div class="container mx-auto px-4">
+          <div class="flex items-center justify-between h-16">
+            <!-- Logo and Title Section -->
+            <div class="flex items-center space-x-2">
+              <a href="/"><img src="assets/f124aa85759b44dabfd64a72858a5b50.png" alt="EduTech Logo" class="h-20"></a>
+              <!-- <img src="./assets/logo.avif" alt="EduTech Logo" class="h-12"> -->
+              <span class="font-semibold text-2xl text-cyan-700"><a href="/">Shyampari Edutech </a></span>
+            </div>
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden md:flex space-x-8">
+              <a href="index.html" class="text-gray-600 hover:text-cyan-700 transition-colors">Home</a>
+              <a href="career.html" class="text-gray-600 hover:text-cyan-700 transition-colors">Career</a>
+              <a href="about.html" class="text-gray-600 hover:text-cyan-700 transition-colors">About</a>
+              <a href="contact.html" class="text-gray-600 hover:text-cyan-700 transition-colors">Contact</a>
+              <a href="faq.html" class="text-gray-600 hover:text-cyan-700 transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Desktop Action Buttons -->
+            <div class="hidden md:flex space-x-4">
+              <a href="blanding.html"> <button
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-cyan-700 hover:text-white h-9 px-4 py-2">
+                  Sign In </button></a>
+
+
+              <!-- <button
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-cyan-700 text-white shadow hover:bg-cyan-800 h-9 px-4 py-2">
+                Get Started </button> -->
+
+            </div>
+
+
+
+
+            <!-- Mobile Menu Button (Animated Hamburger) -->
+            <button id="menu-button" class="relative z-50 flex flex-col justify-center items-center md:hidden">
+              <span class="block h-0.5 w-6 bg-gray-800 transition-transform duration-300"></span>
+              <span class="block h-0.5 w-6 bg-gray-800 mt-1 transition-opacity duration-300"></span>
+              <span class="block h-0.5 w-6 bg-gray-800 mt-1 transition-transform duration-300"></span>
+            </button>
+
+            <!-- Mobile Navigation Menu -->
+            <nav id="mobile-menu"
+              class="fixed top-0 right-0 h-full w-64 bg-white shadow-md transform translate-x-full transition-transform duration-300 z-40">
+              <ul class="flex flex-col space-y-4 p-4 bg-white">
+                <li><a href="index.html"
+                    class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Home</a></li>
+                <li><a href="career.html"
+                    class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Career</a></li>
+                <li><a href="about.html"
+                    class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">About</a></li>
+                <li><a href="contact.html"
+                    class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Contact</a></li>
+                <li><a href="faq.html"
+                    class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">FAQ</a></li>
+                <li><a href="blanding.html"
+                    class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Log In</a></li>
+              </ul>
+            </nav>
+
+
+
+
+          </div>
+        </div>
+      </header>
+
+
+
+      <!-- main content -->
+      <main>
+        <!-- image and heading -->
+        <div class="relative overflow-hidden bg-background pt-24">
+          <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center py-20">
+              <div class="lg:w-1/2 lg:pr-12">
+                <blockquote
+                  class="italic text-2xl text-cyan-700 mb-6 animate__animated animate__fadeInUp animate__delay-1s">
+                  "Pune's No. 1 Home Tuition Provider"
+                </blockquote>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Learn and grow
+                  with<span class="text-primary"> modern education</span></h1>
+                <p class="mt-6 text-lg text-muted-foreground">Transform your learning experience with
+                  our innovative platform. Access world-class Tutors, connect with experts, and
+                  achieve your goals.</p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4"> <a href="contact.html"><button
+                      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-slate-700 hover:text-white h-10 rounded-md px-8 group">
+                      Book a Session
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-arrow-right ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </button>
+                  </a>
+
+                  <a href="career.html"><button
+                      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-slate-700 hover:text-white hover:text-accent-foreground h-10 rounded-md px-8">
+                      Join Us
+                    </button></a>
+
+                </div>
+              </div>
+              <div class="lg:w-1/2 mt-12 lg:mt-0"><img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
+                  alt="Students learning" class="rounded-lg shadow-2xl"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- cards section -->
+        <section class="py-20 bg-gray-50">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+              <h2 class="text-3xl font-bold">Why Choose ShyamPari?</h2>
+              <p class="mt-4 text-muted-foreground">Discover the features that make our platform unique
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div class="bg-white p-6 rounded-lg border hover:shadow-lg transition-shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-book-open h-12 w-12 text-cyan-700 mb-4">
+                  <path d="M12 7v14"></path>
+                  <path
+                    d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                  </path>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2">Expert-Led Courses</h3>
+                <p class="text-muted-foreground">Learn from experienced tutors in all academic fields. </p>
+              </div>
+              <div class="bg-white p-6 rounded-lg border hover:shadow-lg transition-shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-users h-12 w-12 text-cyan-700 mb-4">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2">Counselling Session </h3>
+                <p class="text-muted-foreground">Connect with peers, share knowledge, and grow together in a supportive
+                  environment. </p>
+              </div>
+              <div class="bg-white p-6 rounded-lg border hover:shadow-lg transition-shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-clock h-12 w-12 text-cyan-700 mb-4">
+                  <path d="M12 6v6l4 2"></path>
+                  <circle cx="12" cy="12" r="9"></circle>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2">Flexible Timings</h3>
+                <p class="text-muted-foreground">
+                  Personalized Approached
+                  one on one at home </p>
+              </div>
+              <div class="bg-white p-6 rounded-lg border hover:shadow-lg transition-shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-shield h-12 w-12 text-cyan-700 mb-4">
+                  <path d="M12 2L3 7v6c0 7 9 10 9 10s9-3 9-10V7l-9-5z"></path>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2">Trust & Assurance</h3>
+                <p class="text-muted-foreground">We ensure the highest quality and reliability in every service we
+                  offer.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+
+        <!-- popular courses -->
+        <section class="py-20">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+              <h2 class="text-3xl font-bold">Popular Courses</h2>
+              <p class="mt-4 text-muted-foreground">Start your learning journey with our most sought-after
+                courses</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+              <!-- card1 -->
+              <div
+                class="rounded-xl border bg-card text-card-foreground shadow overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="assets/3988572.jpg" alt="Web Development Fundamentals" class="w-full h-48 object-cover">
+                <div class="flex flex-col space-y-1.5 p-6">
+                  <div class="flex justify-between items-start">
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                      JEE/NEET</div>
+                    <div class="flex items-center"><span class="text-yellow-500">★</span><span class="ml-1">4.7</span>
+                    </div>
+                  </div>
+
+
+                  <h3 class="font-semibold leading-none tracking-tight mt-2">Competitive Exams Preparation
+                  </h3>
+                </div>
+                <div class="p-6 pt-0">
+                  <p class="text-sm text-muted-foreground">300 students enrolled</p>
+                </div>
+                <div class="flex items-center p-6 pt-0"><button
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 w-full">Enroll
+                    Now</button></div>
+              </div>
+
+              <!-- card 2 -->
+              <div
+                class="rounded-xl border bg-card text-card-foreground shadow overflow-hidden hover:shadow-lg transition-shadow">
+                <img
+                  src="https://static.wixstatic.com/media/c837a6_62a5888f7ba5457c886b7d04db843b35~mv2.jpg/v1/fill/w_980,h_832,al_t,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_62a5888f7ba5457c886b7d04db843b35~mv2.jpg"
+                  alt="Data Science Essentials" class="w-full h-48 object-cover">
+                <div class="flex flex-col space-y-1.5 p-6">
+                  <div class="flex justify-between items-start">
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                      Most Preferred </div>
+                    <div class="flex items-center"><span class="text-yellow-500">★</span><span class="ml-1">4.8</span>
+                    </div>
+                  </div>
+                  <h3 class="font-semibold leading-none tracking-tight mt-2">Home Tution (one-on-one)
+                  </h3>
+                </div>
+                <div class="p-6 pt-0">
+                  <p class="text-sm text-muted-foreground">987+ students tutored</p>
+                </div>
+                <div class="flex items-center p-6 pt-0"><button
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 w-full">Enroll
+                    Now</button></div>
+              </div>
+
+              <!-- card 3 -->
+              <div
+                class="rounded-xl border bg-card text-card-foreground shadow overflow-hidden hover:shadow-lg transition-shadow">
+                <img src="assets/medium-shot-kid-taking-notes.jpg" alt="Digital Marketing Strategy"
+                  class="w-full h-48 object-cover">
+                <div class="flex flex-col space-y-1.5 p-6">
+                  <div class="flex justify-between items-start">
+                    <div
+                      class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
+                      Virtual Mode</div>
+                    <div class="flex items-center"><span class="text-yellow-500">★</span><span class="ml-1">4.9</span>
+                    </div>
+                  </div>
+                  <h3 class="font-semibold leading-none tracking-tight mt-2">Online Classes
+                  </h3>
+                </div>
+                <div class="p-6 pt-0">
+                  <p class="text-sm text-muted-foreground">Hassel free & Convenient</p>
+                </div>
+                <div class="flex items-center p-6 pt-0"><button
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 w-full">Enroll
+                    Now</button></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+
+
+      </main>
+
+
+      <!-- Our Promise Section in Card Style -->
+      <section class="py-20 bg-background">
+        <div class="container mx-auto px-4 text-center">
+          <div class="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-lg border border-gray-200">
+            <h2 class="text-3xl font-bold mb-6 text-cyan-700">Our Promise to You</h2>
+            <p class="text-lg text-muted-foreground mb-6">
+              Welcome to Shyampari Edutech Pvt. Ltd., your trusted partner in providing top-notch home tutoring
+              services. We are committed to creating a nurturing environment that sparks a passion for learning and
+              drives academic success—all from the comfort of your home. Our expert educators personalize each lesson to
+              inspire, empower, and guide students towards realizing their full potential.
+            </p>
+            <div class="mt-6 text-lg font-semibold text-cyan-700">
+              <p>"Your Learning, Your Space, Our Expertise"</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- footer -->
+      <footer class="bg-muted/50 border-t">
+        <div class="container mx-auto px-4 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            <!-- Logo Section -->
+            <div class="flex flex-col items-center md:items-start">
+              <div class="flex flex-col items-center md:flex-row md:items-center space-x-0 md:space-x-4">
+                <img src="assets/f124aa85759b44dabfd64a72858a5b50.png" alt="" class="h-16">
+                <span class="font-semibold text-[24px] leading-tight mt-2 md:mt-0">
+                  <a href="/">Shyampari EduTech</a>
+                </span>
+              </div>
+              <p class="mt-4 text-sm text-muted-foreground">
+                Empowering learners worldwide with modern education solutions. <br> <br>{Developer : Amulya Ratna}
+              </p>
+            </div>
+
+            <!-- Platform Section -->
+            <div>
+              <h3 class="font-semibold mb-4">Platform</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Courses</a></li>
+                <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Resources</a></li>
+                <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Community</a></li>
+                <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Teachers</a></li>
+              </ul>
+            </div>
+
+            <!-- Company Section -->
+            <div>
+              <h3 class="font-semibold mb-4">Company</h3>
+              <ul class="space-y-2">
+                <li><a href="about.html" class="text-sm text-muted-foreground hover:text-primary">About Us</a></li>
+                <li><a href="career.html" class="text-sm text-muted-foreground hover:text-primary">Careers</a></li>
+                <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Blog</a></li>
+                <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Press</a></li>
+              </ul>
+            </div>
+
+            <!-- Support Section -->
+            <div>
+              <h3 class="font-semibold mb-4">Support</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Help Center</a></li>
+                <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Terms of Service</a></li>
+                <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Privacy Policy</a></li>
+                <li><a href="contact.html" class="text-sm text-muted-foreground hover:text-primary">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Footer Bottom Section -->
+          <div class="mt-12 pt-8 border-t">
+            <p class="text-center text-sm text-muted-foreground">
+              © 2024 Shyampari Edutech Pvt. Ltd. <br> All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="webscr.js">
+  </script>
+
+
+
+</body>
+
+</html>

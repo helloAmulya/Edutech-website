@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center bg-gray-100">
+        <form id="registrationForm" class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h2 class="text-2xl font-bold mb-4">Register</h2>
+            <select id="role" class="w-full mb-4 p-2 border rounded">
+                <option value="">Select Role</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Parent">Parent</option>
+            </select>
+            <input type="text" id="name" placeholder="Name" class="w-full mb-4 p-2 border rounded">
+            <input type="email" id="email" placeholder="Email" class="w-full mb-4 p-2 border rounded">
+            <input type="password" id="password" placeholder="Password" class="w-full mb-4 p-2 border rounded">
+            <div id="teacherFields" class="hidden">
+                <input type="text" id="subject" placeholder="Subject Expertise" class="w-full mb-4 p-2 border rounded">
+                <input type="number" id="experience" placeholder="Years of Experience" class="w-full mb-4 p-2 border rounded">
+            </div>
+            <div id="parentFields" class="hidden">
+                <input type="text" id="childName" placeholder="Child's Name" class="w-full mb-4 p-2 border rounded">
+                <input type="number" id="childAge" placeholder="Child's Age" class="w-full mb-4 p-2 border rounded">
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Register</button>
+        </form>
+    </div>
+    
+    <script src="cgsc.js"></script>
+</body>
+</html>

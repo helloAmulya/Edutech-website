@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech Platform - Join Our Community</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<body
+    class="min-h-screen bg-gradient-to-b from-blue-50 to-cyan-800 sm:bg-none md:bg-gradient-to-br from-blue-50 to-cyan-700">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Title Section -->
+                <div class="flex items-center space-x-2">
+                    <a href="/"><img src="assets/f124aa85759b44dabfd64a72858a5b50.png" alt="EduTech Logo"
+                            class="h-20"></a>
+                    <!-- <img src="./assets/logo.avif" alt="EduTech Logo" class="h-12"> -->
+                    <span class="font-semibold text-2xl text-cyan-700"><a href="/">Shyampari Edutech </a></span>
+                </div>
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-cyan-700 transition-colors">Home</a>
+                    <a href="career.html" class="text-gray-600 hover:text-cyan-700 transition-colors">Career</a>
+                    <a href="about.html" class="text-gray-600 hover:text-cyan-700 transition-colors">About</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-cyan-700 transition-colors">Contact</a>
+                    <a href="faq.html" class="text-gray-600 hover:text-cyan-700 transition-colors">FAQ</a>
+                </nav>
+
+                <!-- Mobile Menu Button (Animated Hamburger) -->
+                <button id="menu-button" class="relative z-50 flex flex-col justify-center items-center md:hidden">
+                    <span class="block h-0.5 w-6 bg-gray-800 transition-transform duration-300"></span>
+                    <span class="block h-0.5 w-6 bg-gray-800 mt-1 transition-opacity duration-300"></span>
+                    <span class="block h-0.5 w-6 bg-gray-800 mt-1 transition-transform duration-300"></span>
+                </button>
+
+                <!-- Mobile Navigation Menu -->
+                <nav id="mobile-menu"
+                    class="fixed top-0 right-0 h-full w-64 bg-white shadow-md transform translate-x-full transition-transform duration-300 z-40">
+                    <ul class="flex flex-col space-y-4 p-4 bg-white">
+                        <li><a href="index.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Home</a>
+                        </li>
+                        <li><a href="career.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Career</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">About</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Contact</a>
+                        </li>
+                        <li><a href="faq.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 mt-10 container md:py-36">
+        <div class="text-center">
+            <h2 class=" text-4xl lg:text-6xl font-extrabold text-gray-900 sm:text-5xl">
+                Welcome to Shyampari
+            </h2>
+            <p class="mt-4 text-xl text-gray-600">
+                Join our growing community of educators and learners
+            </p>
+        </div>
+
+        <!-- Registration Cards -->
+        <div class="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Parent Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div class="p-8">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                        <svg class="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-semibold text-gray-900 text-center">Parent Registration</h3>
+                    <p class="mt-4 text-gray-600 text-center">
+                        Monitor your child's progress and stay connected with teachers
+                    </p>
+                    <div class="mt-8">
+                        <a href="bparent.html"
+                            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-700 hover:bg-cyan-600 md:py-4 md:text-lg md:px-10">
+                            Register as Parent
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div class="p-8">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                        <svg class="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                        </svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-semibold text-gray-900 text-center">Teacher Registration</h3>
+                    <p class="mt-4 text-gray-600 text-center">
+                        Create engaging content and track student performance
+                    </p>
+                    <div class="mt-8">
+                        <a href="bteacher.html"
+                            class="w-full flex items-center justify-center px-8 py-3 border border-2 border-cyan-700 text-base font-medium rounded-md text-cyan-700 bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-10">
+                            Register as Teacher
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                <!-- Logo Section -->
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="flex flex-col items-center md:flex-row md:items-center space-x-0 md:space-x-4">
+                        <img src="assets/f124aa85759b44dabfd64a72858a5b50.png" alt="" class="h-16">
+                        <span class="font-semibold text-[24px] leading-tight mt-2 md:mt-0">
+                            <a href="/">Shyampari EduTech</a>
+                        </span>
+                    </div>
+                    <p class="mt-4 text-sm text-muted-foreground">
+                        Empowering learners worldwide with modern education solutions. <br> <br>{Developer : Amulya
+                        Ratna}
+                    </p>
+                </div>
+
+                <!-- Platform Section -->
+                <div>
+                    <h3 class="font-semibold mb-4">Platform</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Courses</a></li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Resources</a></li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Community</a></li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Teachers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Section -->
+                <div>
+                    <h3 class="font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-sm text-muted-foreground hover:text-primary">About Us</a>
+                        </li>
+                        <li><a href="career.html" class="text-sm text-muted-foreground hover:text-primary">Careers</a>
+                        </li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Blog</a></li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Press</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Section -->
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Help Center</a></li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Terms of Service</a>
+                        </li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="text-sm text-muted-foreground hover:text-primary">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="mt-12 pt-8 border-t">
+                <p class="text-center text-sm text-muted-foreground">
+                    © 2024 Shyampari Edutech Pvt. Ltd. <br> All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for form validation -->
+    <script src="webscr.js"></script>
+    <script>
+        // Add any necessary JavaScript here
+        document.addEventListener('DOMContentLoaded', function () {
+            // You can add form validation or other functionality here
+
+
+        });
+    </script>
+</body>
+
+</html>

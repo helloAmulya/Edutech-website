@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Shyampari Edutech</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="tailwind.css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #07929f;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .faq-item h3 {
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .faq-item h3:hover {
+            color: #00A7B7;
+        }
+
+        .faq-item .faq-number {
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #00A7B7;
+        }
+
+        .faq-item .faq-icon {
+            margin-left: auto;
+            font-size: 1.3em;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-item p {
+            padding: 10px;
+            background-color: #f9f9f9;
+
+            border-left: 3px solid #00A7B7;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .faq-item p:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .faq-title {
+                font-size: 1.6em;
+            }
+
+            .faq-item h3 {
+                font-size: 1.1em;
+            }
+
+            .faq-item .faq-number {
+                font-size: 1.3em;
+            }
+
+            .faq-item p {
+                font-size: 0.9em;
+                padding: 8px;
+            }
+        }
+
+        /* Small screen styles for mobile devices */
+        @media (max-width: 480px) {
+            .faq-title {
+                font-size: 1.4em;
+            }
+
+            .faq-item h3 {
+                font-size: 1em;
+            }
+
+            .faq-item .faq-number {
+                font-size: 1.2em;
+            }
+
+            .faq-item p {
+                font-size: 0.8em;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Title Section -->
+                <div class="flex items-center space-x-2">
+                    <a href="/"><img src="assets/f124aa85759b44dabfd64a72858a5b50.png" alt="EduTech Logo"
+                            class="h-20"></a>
+                    <!-- <img src="./assets/logo.avif" alt="EduTech Logo" class="h-12"> -->
+                    <span class="font-semibold text-2xl text-cyan-700"><a href="/">Shyampari Edutech </a></span>
+                </div>
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-cyan-700 transition-colors">Home</a>
+                    <a href="career.html" class="text-gray-600 hover:text-cyan-700 transition-colors">Career</a>
+                    <a href="about.html" class="text-gray-600 hover:text-cyan-700 transition-colors">About</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-cyan-700 transition-colors">Contact</a>
+                    <a href="faq.html" class="text-gray-600 hover:text-cyan-700 transition-colors">FAQ</a>
+                </nav>
+
+                <!-- Desktop Action Buttons -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="blanding.html"> <button
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-cyan-700 hover:text-white h-9 px-4 py-2">
+                            Sign In </button></a>
+
+
+                    <!-- <button
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-cyan-700 text-white shadow hover:bg-cyan-800 h-9 px-4 py-2">
+                Get Started </button> -->
+
+                </div>
+
+
+
+
+                <!-- Mobile Menu Button (Animated Hamburger) -->
+                <button id="menu-button" class="relative z-50 flex flex-col justify-center items-center md:hidden">
+                    <span class="block h-0.5 w-6 bg-gray-800 transition-transform duration-300"></span>
+                    <span class="block h-0.5 w-6 bg-gray-800 mt-1 transition-opacity duration-300"></span>
+                    <span class="block h-0.5 w-6 bg-gray-800 mt-1 transition-transform duration-300"></span>
+                </button>
+
+                <!-- Mobile Navigation Menu -->
+                <nav id="mobile-menu"
+                    class="fixed top-0 right-0 h-full w-64 bg-white shadow-md transform translate-x-full transition-transform duration-300 z-40">
+                    <ul class="flex flex-col space-y-4 p-4 bg-white">
+                        <li><a href="index.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Home</a>
+                        </li>
+                        <li><a href="career.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Career</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">About</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Contact</a>
+                        </li>
+                        <li><a href="faq.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">FAQ</a>
+                        </li>
+                        <li><a href="blanding.html"
+                                class="block px-4 py-2 rounded text-gray-600 hover:text-cyan-700 hover:bg-gray-100">Log
+                                In</a></li>
+                    </ul>
+                </nav>
+
+
+
+
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <div class="faq-title">Frequently Asked Questions</div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">
+                <span class="faq-number">1.</span>
+                <span>What services does Shyampari Edutech offer?</span>
+                <i class="faq-icon fas fa-chevron-down"></i>
+            </h3>
+            <p>We provide personalized home tutoring services across various subjects, focusing on helping students
+                excel in their academic journey. Our services include one-on-one tutoring, expert-led courses, and
+                counseling sessions to guide students through their learning.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">
+                <span class="faq-number">2.</span>
+                <span>How do I sign up for tutoring services?</span>
+                <i class="faq-icon fas fa-chevron-down"></i>
+            </h3>
+            <p>Simply visit our *Get Started* page and fill out the form with your details. Once we receive your
+                request, our team will contact you to match you with a suitable tutor based on your subject preferences
+                and learning goals.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">
+                <span class="faq-number">3.</span>
+                <span>Are the tutoring sessions online or in-person?</span>
+                <i class="faq-icon fas fa-chevron-down"></i>
+            </h3>
+            <p>We offer both in-person and online tutoring sessions. You can choose the option that works best for you
+                when filling out the sign-up form.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">
+                <span class="faq-number">4.</span>
+                <span>How can I book a session with a tutor?</span>
+                <i class="faq-icon fas fa-chevron-down"></i>
+            </h3>
+            <p>After registering, you'll be able to browse available tutors and their schedules, then select the time
+                slot that works for you. Booking can be done directly from your profile page.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">
+                <span class="faq-number">5.</span>
+                <span>What subjects are covered in tutoring sessions?</span>
+                <i class="faq-icon fas fa-chevron-down"></i>
+            </h3>
+            <p>We offer tutoring in a wide range of subjects including Mathematics, Science, English, Social Studies,
+                and more. We also provide specialized courses and exam preparation assistance.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-question">
+                <span class="faq-number">6.</span>
+                <span>What if I am not satisfied with my tutor?</span>
+                <i class="faq-icon fas fa-chevron-down"></i>
+            </h3>
+            <p>If you're not satisfied with your tutor, let us know. We'll work to find a better match for your needs or
+                issue a refund, depending on the situation.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-muted/50 border-t">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                <!-- Logo Section -->
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="flex flex-col items-center md:flex-row md:items-center space-x-0 md:space-x-4">
+                        <img src="assets/f124aa85759b44dabfd64a72858a5b50.png" alt="" class="h-16">
+                        <span class="font-semibold text-[24px] leading-tight mt-2 md:mt-0">
+                            <a href="/">Shyampari EduTech</a>
+                        </span>
+                    </div>
+                    <p class="mt-4 text-sm text-muted-foreground">
+                        Empowering learners worldwide with modern education solutions. <br> <br>{Developer : Amulya
+                        Ratna}
+                    </p>
+                </div>
+
+                <!-- Platform Section -->
+                <div>
+                    <h3 class="font-semibold mb-4">Platform</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Courses</a></li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Resources</a></li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Community</a></li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Teachers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Section -->
+                <div>
+                    <h3 class="font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-sm text-muted-foreground hover:text-primary">About Us</a>
+                        </li>
+                        <li><a href="career.html" class="text-sm text-muted-foreground hover:text-primary">Careers</a>
+                        </li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Blog</a></li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Press</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Section -->
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Help Center</a></li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Terms of Service</a>
+                        </li>
+                        <li><a href="#" class="text-sm text-muted-foreground hover:text-primary">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="text-sm text-muted-foreground hover:text-primary">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="mt-12 pt-8 border-t">
+                <p class="text-center text-sm text-muted-foreground">
+                    © 2024 Shyampari Edutech Pvt. Ltd. <br> All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="webscr.js"></script>
+
+
+</body>
+
+</html>
